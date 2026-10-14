@@ -2,9 +2,15 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "portfolio-restaurant",
   "compatibility_date": "2026-10-12",
+  "compatibility_flags": ["nodejs_compat"],
   "observability": {
     "enabled": true
   },
+  "assets": {
+    "directory": "./.next/static",
+    "binding": "ASSETS"
+  },
+  "main": ".open-next/worker.js",
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
